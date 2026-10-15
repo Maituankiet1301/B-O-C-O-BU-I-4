@@ -1,0 +1,134 @@
+<mxfile host="Electron" modified="2026-10-15T13:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="usecase-l6-diagram" name="Use Case Diagram - Luồng L6">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Ranh giới hệ thống (System Boundary) -->
+        <mxCell id="boundary" value="Hệ thống: Kho dữ liệu bán hàng và Báo cáo doanh thu (Luồng L6) - Mekong Mobile" style="shape=rect;rounded=1;arcSize=4;fillColor=#f8fafc;strokeColor=#334155;strokeWidth=2;dashed=0;align=center;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="250" y="40" width="670" height="660" as="geometry" />
+        </mxCell>
+
+        <!-- Actors bên trái -->
+        <!-- Actor 1: Kỹ sư dữ liệu -->
+        <mxCell id="act_de" value="Kỹ sư dữ liệu&#xa;(Data Engineer)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="110" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Actor 2: Hệ thống hẹn giờ Cron (Actor phụ) -->
+        <mxCell id="act_cron" value="«System / Timer»&#xa;Hệ thống lập lịch&#xa;(Cron Scheduler)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f1f5f9;strokeColor=#64748b;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="290" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Actors bên phải -->
+        <!-- Actor 3: Quản lý cửa hàng -->
+        <mxCell id="act_sm" value="Quản lý cửa hàng&#xa;(Store Manager)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="140" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Actor 4: Ban giám đốc -->
+        <mxCell id="act_bod" value="Giám đốc kinh doanh /&#xa;Ban giám đốc" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="380" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases bên trong Boundary -->
+        <!-- UC1 -->
+        <mxCell id="uc1" value="UC1: Trích xuất và nạp dữ liệu&#xa;từ 24 cửa hàng vào Staging" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="80" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- UC2 -->
+        <mxCell id="uc2" value="UC2: Làm sạch, chuẩn hóa và&#xa;kiểm tra chất lượng dữ liệu" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0369a1;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="190" width="230" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- UC2a (Extend) -->
+        <mxCell id="uc2_ext" value="Ghi nhận dòng dữ liệu lỗi&#xa;vào bảng Reject và cảnh báo" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=1.5;strokeColor=#b91c1c;fontSize=11;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="660" y="185" width="210" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- UC3 -->
+        <mxCell id="uc3" value="UC3: Nạp dữ liệu vào mô hình&#xa;kho dữ liệu (Fact &amp; Dimensions)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="230" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- UC4 -->
+        <mxCell id="uc4" value="UC4: Xem dashboard doanh thu&#xa;theo ngày và tháng của cửa hàng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.5;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="390" width="230" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- UC5 -->
+        <mxCell id="uc5" value="UC5: Phân tích doanh thu đa chiều&#xa;theo nhóm sản phẩm theo quý" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=1.5;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="480" width="240" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- UC6 -->
+        <mxCell id="uc6" value="UC6: Báo cáo so sánh cửa hàng &amp;&#xa;Cảnh báo sụt giảm 3 tháng liên tiếp" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=1.5;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="570" width="240" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Quan hệ phụ thuộc UC -->
+        <!-- UC2 includes UC1 -->
+        <mxCell id="rel_inc_1" value="«include»" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#475569;" edge="1" parent="1" source="uc2" target="uc1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="190" as="sourcePoint" />
+            <mxPoint x="410" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- UC2 extends UC2_ext -->
+        <mxCell id="rel_ext_1" value="«extend»" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#dc2626;" edge="1" parent="1" source="uc2_ext" target="uc2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="215" as="sourcePoint" />
+            <mxPoint x="610" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Liên kết Actor và Use Case -->
+        <!-- Data Engineer links -->
+        <mxCell id="link_de_uc1" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#0284c7;" edge="1" parent="1" source="act_de" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link_de_uc2" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#0284c7;" edge="1" parent="1" source="act_de" target="uc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link_de_uc3" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#0284c7;" edge="1" parent="1" source="act_de" target="uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Cron links -->
+        <mxCell id="link_cron_uc1" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#64748b;" edge="1" parent="1" source="act_cron" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Store Manager links -->
+        <mxCell id="link_sm_uc4" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#d97706;" edge="1" parent="1" source="act_sm" target="uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- BOD links -->
+        <mxCell id="link_bod_uc4" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#16a34a;" edge="1" parent="1" source="act_bod" target="uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link_bod_uc5" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#16a34a;" edge="1" parent="1" source="act_bod" target="uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link_bod_uc6" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#16a34a;" edge="1" parent="1" source="act_bod" target="uc6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Bảng chú thích (Legend) -->
+        <mxCell id="legend_box" value="CHÚ THÍCH KÝ HIỆU (LEGEND)&#xa;─────────────────────────────────────&#xa;• Hình chữ nhật nét đậm: Ranh giới hệ thống (System Boundary)&#xa;• Người que: Tác nhân ngoài (Actor: Người dùng hoặc Bộ lập lịch Cron)&#xa;• Hình oval: Use Case nghiệp vụ (Chức năng hệ thống cung cấp)&#xa;• «include»: Bắt buộc thực hiện UC liên kết (UC2 luôn thực thi sau UC1)&#xa;• «extend»: Mở rộng có điều kiện (chỉ thực hiện khi có dữ liệu lỗi)&#xa;• Đoạn nối liền: Liên kết tham gia tương tác giữa Actor và Use Case" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fffbeb;strokeColor=#b45309;strokeWidth=1;size=14;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="470" width="310" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Dòng Ngoài phạm vi (Out of Scope) -->
+        <mxCell id="scope_box" value="⚠️ NGOÀI PHẠM VI HỆ THỐNG (OUT OF SCOPE):&#xa;1. Hệ thống POS quầy thu ngân tại từng cửa hàng (chỉ nhận file kết xuất).&#xa;2. Cổng thanh toán trực tuyến &amp; Ngân hàng.&#xa;3. Hệ thống quản lý kiểm kê tồn kho vật lý." style="shape=rect;rounded=1;arcSize=6;fillColor=#fef2f2;strokeColor=#ef4444;strokeWidth=1.5;align=left;spacingLeft=8;fontSize=11;fontColor=#991b1b;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="630" width="310" height="70" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

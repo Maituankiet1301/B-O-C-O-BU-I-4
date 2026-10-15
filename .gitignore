@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Data and Notebooks
+*.csv
+*.xlsx
+.ipynb_checkpoints/
+data/raw/
+data/processed/
+
+# OS specific
+.DS_Store
+Thumbs.db
