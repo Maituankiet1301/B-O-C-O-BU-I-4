@@ -11,7 +11,7 @@
 ### BẢNG ĐIỀN THÔNG TIN BÁO CÁO BUỔI 4
 
 **1. Link commit cuối buổi (docs/srs.md + file .drawio):**  
-[https://github.com/Maituankiet1301/B-O-C-O-BU-I-4](https://github.com/Maituankiet1301/B-O-C-O-BU-I-4) (Commit đầy đủ `docs/srs.md`, `docs/data-requirements.md`, `docs/usecase.drawio`, `docs/ai-disclosure.md` lên branch `main`).
+[https://github.com/Maituankiet1301/B-O-C-O-BU-I-4/commit/06331c3](https://github.com/Maituankiet1301/B-O-C-O-BU-I-4/commit/06331c3) (Đã commit đầy đủ `docs/srs.md`, `docs/data-requirements.md`, `docs/usecase.drawio`, `docs/ai-disclosure.md` lên branch `main`).
 
 **2. User Story:**  
 **06** story | **03** MUST (US1, US2, US3) | **14** tiêu chí GWT (**06** tiêu chí ngoại lệ/validation).
