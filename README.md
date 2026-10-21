@@ -23,16 +23,25 @@ Hệ thống giải quyết bài toán hợp nhất, chuẩn hóa và phân tíc
 ```text
 .
 ├── BAO_CAO_BUOI_4.md          # Báo cáo kết quả thực hành Buổi 4 (12 mục điền đủ)
+├── BAO_CAO_BUOI_5.md          # Thiết kế kiến trúc, mô hình dữ liệu và wireframe Buổi 5
 ├── README.md                  # Hướng dẫn tổng quan kho mã nguồn
 ├── docs/                      # Thư mục hồ sơ phân tích và thiết kế
 │   ├── srs.md                 # Bản đặc tả yêu cầu phần mềm rút gọn (SRS 6 mục)
 │   ├── data-requirements.md   # Đặc tả yêu cầu dữ liệu chuyên ngành DA (Mẫu track)
+│   ├── architecture.drawio    # Sơ đồ kiến trúc và luồng dữ liệu L6
+│   ├── erd.drawio             # Mô hình Star Schema của track DA
+│   ├── wireframe.drawio       # Nguồn wireframe 3 màn hình dashboard
+│   ├── wireframe.png          # Bản xem nhanh 3 wireframe
 │   ├── usecase.drawio         # File nguồn sơ đồ Use Case Diagram (Draw.io XML)
 │   ├── usecase-specification.md # Đặc tả chi tiết Use Case UC2 & UC4 (Luồng chính & Ngoại lệ)
 │   └── ai-disclosure.md       # Bảng khai báo minh bạch công cụ AI và cam kết
 ├── src/                       # Mã nguồn pipeline ETL và Dashboard (Phát triển ở BT2)
 └── tests/                     # Kịch bản kiểm thử chất lượng dữ liệu (Phát triển ở BT3)
 ```
+
+### Hồ sơ thiết kế Buổi 5
+
+Mở [BAO_CAO_BUOI_5.md](BAO_CAO_BUOI_5.md) để xem các quyết định kiến trúc, grain và điểm cần xác nhận. Các sơ đồ `.drawio` là tệp nguồn có thể chỉnh sửa; `docs/wireframe.png` là bản xem nhanh ba trang wireframe. Buổi 5 hoàn thiện tài liệu thiết kế BT1; phần mã ETL và dashboard thuộc BT2.
 
 ---
 
