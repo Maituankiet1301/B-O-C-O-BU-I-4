@@ -29,7 +29,9 @@ Hệ thống giải quyết bài toán hợp nhất, chuẩn hóa và phân tíc
 │   ├── srs.md                 # Bản đặc tả yêu cầu phần mềm rút gọn (SRS 6 mục)
 │   ├── data-requirements.md   # Đặc tả yêu cầu dữ liệu chuyên ngành DA (Mẫu track)
 │   ├── architecture.drawio    # Sơ đồ kiến trúc và luồng dữ liệu L6
+│   ├── architecture.png      # Ảnh xem nhanh sơ đồ kiến trúc
 │   ├── erd.drawio             # Mô hình Star Schema của track DA
+│   ├── erd.png                 # Ảnh xem nhanh mô hình Star Schema
 │   ├── wireframe.drawio       # Nguồn wireframe 3 màn hình dashboard
 │   ├── wireframe.png          # Bản xem nhanh 3 wireframe
 │   ├── usecase.drawio         # File nguồn sơ đồ Use Case Diagram (Draw.io XML)
@@ -41,7 +43,17 @@ Hệ thống giải quyết bài toán hợp nhất, chuẩn hóa và phân tíc
 
 ### Hồ sơ thiết kế Buổi 5
 
-Mở [BAO_CAO_BUOI_5.md](BAO_CAO_BUOI_5.md) để xem các quyết định kiến trúc, grain và điểm cần xác nhận. Các sơ đồ `.drawio` là tệp nguồn có thể chỉnh sửa; `docs/wireframe.png` là bản xem nhanh ba trang wireframe. Buổi 5 hoàn thiện tài liệu thiết kế BT1; phần mã ETL và dashboard thuộc BT2.
+Mở [BAO_CAO_BUOI_5.md](BAO_CAO_BUOI_5.md) để xem các quyết định kiến trúc, grain và điểm cần xác nhận. Tệp `.drawio` là nguồn sơ đồ có thể chỉnh sửa bằng diagrams.net/draw.io; GitHub không hiển thị sơ đồ từ XML nên repo kèm các ảnh PNG xem nhanh: [kiến trúc](docs/architecture.png), [Star Schema](docs/erd.png) và [ba wireframe](docs/wireframe.png).
+
+### Xem nhanh thiết kế
+
+![Sơ đồ kiến trúc và luồng dữ liệu](docs/architecture.png)
+
+![Mô hình dữ liệu Star Schema](docs/erd.png)
+
+![Ba màn hình wireframe](docs/wireframe.png)
+
+Buổi 5 hoàn thiện tài liệu thiết kế BT1; phần mã ETL và dashboard thuộc BT2.
 
 ---
 

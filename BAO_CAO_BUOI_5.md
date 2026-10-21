@@ -20,12 +20,14 @@ Buổi 4 đã hoàn thành SRS, Use Case và đặc tả yêu cầu dữ liệu.
 
 | Thành phần | Tệp | Nội dung |
 |---|---|---|
-| Thiết kế kiến trúc và data flow | [docs/architecture.drawio](docs/architecture.drawio) | Nguồn dữ liệu, lịch chạy, ETL, Staging, kiểm tra chất lượng, vùng Reject, kho sao, dashboard, tác nhân, chú thích và ngoài phạm vi. |
-| Mô hình dữ liệu track DA | [docs/erd.drawio](docs/erd.drawio) | Một fact, bốn dimension; khóa, kiểu dữ liệu, mô tả, quan hệ và GRAIN. |
+| Thiết kế kiến trúc và data flow | [docs/architecture.drawio](docs/architecture.drawio), [ảnh xem nhanh](docs/architecture.png) | Nguồn dữ liệu, lịch chạy, ETL, Staging, kiểm tra chất lượng, vùng Reject, kho sao, dashboard, tác nhân, chú thích và ngoài phạm vi. |
+| Mô hình dữ liệu track DA | [docs/erd.drawio](docs/erd.drawio), [ảnh xem nhanh](docs/erd.png) | Một fact, bốn dimension; khóa, kiểu dữ liệu, mô tả, quan hệ và GRAIN. |
 | Wireframe ba màn hình | [docs/wireframe.drawio](docs/wireframe.drawio), [docs/wireframe.png](docs/wireframe.png) | Dashboard chi nhánh, phân tích nhóm sản phẩm theo quý và so sánh cửa hàng/cảnh báo giảm doanh thu; mỗi trang ghi Use Case và nguồn dữ liệu. |
 | Báo cáo buổi 5 | [BAO_CAO_BUOI_5.md](BAO_CAO_BUOI_5.md) | Lập luận lựa chọn kiến trúc, mô hình dữ liệu, quy tắc truy vết, quyết định và điểm cần xác nhận. |
 
 ## 3. Thiết kế kiến trúc
+
+![Sơ đồ kiến trúc và luồng dữ liệu L6](docs/architecture.png)
 
 ### 3.1. Các lớp và cách trao đổi dữ liệu
 
@@ -47,6 +49,8 @@ Buổi 4 đã hoàn thành SRS, Use Case và đặc tả yêu cầu dữ liệu.
 POS/thanh toán tại quầy, quản lý tồn kho vật lý, gửi SMS/email và triển khai hạ tầng production nhiều nút không thuộc phạm vi thiết kế của luồng L6 trong BT1.
 
 ## 4. Mô hình dữ liệu phân tích
+
+![Star Schema của kho dữ liệu](docs/erd.png)
 
 ### 4.1. GRAIN và quy tắc khóa
 
@@ -79,6 +83,8 @@ Mô tả đầy đủ từng cột, kiểu dữ liệu, khóa và quan hệ nằ
 
 Wireframe ở [docs/wireframe.drawio](docs/wireframe.drawio) gồm ba màn hình:
 
+![Bản xem nhanh ba màn hình wireframe](docs/wireframe.png)
+
 | Màn hình | Use Case | Bộ lọc, chỉ số và thông tin hiển thị | Bảng/thuộc tính nguồn |
 |---|---|---|---|
 | Doanh thu chi nhánh theo thời gian | UC4 / US3 | Khoảng ngày, cửa hàng theo quyền; tổng doanh thu, số đơn, AOV; đường doanh thu ngày; chi tiết mã đơn, thành tiền và SĐT đã che. | `dim_date`, `dim_store`, `dim_customer`, `fact_sales`; các số tổng hợp được tính từ Fact. |
@@ -97,9 +103,9 @@ Các khung không đưa thuộc tính ngoài mô hình vào giao diện. Wirefra
 
 ## 7. Checklist buổi 5
 
-- [x] Sơ đồ kiến trúc có thành phần, trách nhiệm, luồng trao đổi, chú thích và ngoài phạm vi.
+- [x] Sơ đồ kiến trúc có thành phần, trách nhiệm, luồng trao đổi, chú thích, ngoài phạm vi và ảnh xem nhanh.
 - [x] Có ít nhất ba lập luận kiến trúc, mỗi lập luận gắn với NFR và nêu đánh đổi.
-- [x] Mô hình track DA có một Fact, bốn Dimension, GRAIN rõ ràng, khóa và mô tả kiểu dữ liệu.
+- [x] Mô hình track DA có một Fact, bốn Dimension, GRAIN rõ ràng, khóa, mô tả kiểu dữ liệu và ảnh xem nhanh.
 - [x] Có ba wireframe, mỗi màn hình truy vết ít nhất một Use Case và chỉ dùng dữ liệu có trong mô hình.
 - [x] Ghi nhận điểm mơ hồ về khóa ghép order–store và cách xử lý có kiểm soát.
 - [ ] Xác nhận schema thực tế của các tệp CSV, quyền truy cập collaborator và kết quả peer review trước khi nộp BT1.
